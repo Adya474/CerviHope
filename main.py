@@ -20,3 +20,5 @@ def app_page():
       health officials, and outreach for broader adoption.
 
     ''')
+
+login_page()
