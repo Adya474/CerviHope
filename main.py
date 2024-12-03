@@ -28,8 +28,7 @@ def app_page():
     ''')
 
 # Main logic
-while True:
-    if st.session_state["logged_in"]:
-        app_page()
-    else:
-        login_page()
+while st.session_state["logged_in"]:
+    app_page()
+while st.session_state["logged_in"] != True:
+    login_page()
