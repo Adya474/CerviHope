@@ -28,7 +28,8 @@ def app_page():
     ''')
 
 # Main logic
-if st.session_state["logged_in"]:
-    app_page()
-else:
-    login_page()
+while True:
+    if st.session_state["logged_in"]:
+        app_page()
+    else:
+        login_page()
