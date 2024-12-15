@@ -19,13 +19,16 @@ RECORDS_FILE = "patient_records.json"
 
 os.makedirs(UPLOAD_DIR, exist_ok=True)
 
-# User credentials
-USER_CREDENTIALS = {
-    "adya": "adya1234",
-    "arya": "arya1234",
-    "path1": "path1234",
-    "path2": "path1234"
-}
+# Load user credentials from secrets
+USER_CREDENTIALS = st.secrets["users"]
+
+# # User credentials
+# USER_CREDENTIALS = {
+#     "adya": "adya1234",
+#     "arya": "arya1234",
+#     "path1": "path1234",
+#     "path2": "path1234"
+# }
 
 # Initialize session state variables
 if "logged_in" not in st.session_state:
