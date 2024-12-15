@@ -21,14 +21,7 @@ os.makedirs(UPLOAD_DIR, exist_ok=True)
 
 # Load user credentials from secrets
 USER_CREDENTIALS = st.secrets["users"]
-
-# # User credentials
-# USER_CREDENTIALS = {
-#     "adya": "adya1234",
-#     "arya": "arya1234",
-#     "path1": "path1234",
-#     "path2": "path1234"
-# }
+url = st.secrets["url"]["url"]
 
 # Initialize session state variables
 if "logged_in" not in st.session_state:
@@ -57,7 +50,7 @@ load_records_from_file()
 
 
 def get_prediction(image_data):
-    url = 'https://askai.aiclub.world/c23bffea-9fc9-41f9-b2bf-ac7e272f1e9b'
+    url = url
     r = requests.post(url, data=image_data)
     response = r.json()['predicted_label']
     score = r.json()['score']
