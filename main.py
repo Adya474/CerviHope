@@ -7,6 +7,7 @@ import io
 import os
 import pandas as pd
 
+IMAGE_URL = "https://cdn.cancercenter.com/-/media/ctca/images/others/blogs/2016/08-august/09-news-cell-wars-fb.jpg"
 # CONSTANTS
 PREDICTED_LABELS = ['High squamous intra-epithelial lesion', 
                     'Low squamous intra-epithelial lesion', 
