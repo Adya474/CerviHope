@@ -21,7 +21,7 @@ os.makedirs(UPLOAD_DIR, exist_ok=True)
 
 # Load user credentials from secrets
 USER_CREDENTIALS = st.secrets["users"]
-url = st.secrets["url"]["url"]
+MODEL_PREDICTION_URL = st.secrets["url"]["modelPrediction"]
 
 # Initialize session state variables
 if "logged_in" not in st.session_state:
@@ -50,8 +50,7 @@ load_records_from_file()
 
 
 def get_prediction(image_data):
-    url = url
-    r = requests.post(url, data=image_data)
+    r = requests.post(MODEL_PREDICTION_URL, data=image_data)
     response = r.json()['predicted_label']
     score = r.json()['score']
     return response, score
