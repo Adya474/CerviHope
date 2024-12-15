@@ -132,6 +132,11 @@ def image_analysis_page():
 
         # Add record to session state
         username = st.session_state["username"]
+
+        # Ensure the user's record list is initialized
+        if username not in st.session_state["patient_records"]:
+            st.session_state["patient_records"][username] = []
+
         st.session_state["patient_records"][username].append({
             "Patient Name": patient_name,
             "Image Name": image.name,
