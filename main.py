@@ -6,6 +6,7 @@ from PIL import Image
 import io
 import os
 import pandas as pd
+st.set_option('client.showErrorDetails', False)
 
 IMAGE_URL = "https://cdn.cancercenter.com/-/media/ctca/images/others/blogs/2016/08-august/09-news-cell-wars-fb.jpg"
 # CONSTANTS
