@@ -9,7 +9,6 @@ import pandas as pd
 st.set_option('client.showErrorDetails', False)
 
 IMAGE_URL = "https://cdn.cancercenter.com/-/media/ctca/images/others/blogs/2016/08-august/09-news-cell-wars-fb.jpg"
-website_url = "https://cervihope.com/"
 
 # CONSTANTS
 PREDICTED_LABELS = ['High squamous intra-epithelial lesion', 
@@ -61,11 +60,16 @@ def get_prediction(image_data):
 
 def login_page():
     st.title("CerviHope Login")
-    st.subheader("This is the link for our Bussiness Website: [link](https://www.cervihope.com/)", divider="gray")
+    st.subheader("This is the link for our Bussiness Website: [www.cervihope.com](https://www.cervihope.com/)", divider="gray")
 
     username = st.text_input("👤 Enter Username")
     password = st.text_input("🔒 Enter Password", type="password")
 
+    st.markdown("""
+    The username for the judges: arya
+    The password for the judges: arya1234
+    """)
+  
     if st.button("Login"):
         # Authentication logic
         if username in USER_CREDENTIALS and USER_CREDENTIALS[username] == password:
