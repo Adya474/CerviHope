@@ -60,7 +60,7 @@ def get_prediction(image_data):
 
 def login_page():
     st.title("CerviHope Login")
-    st.subheader("This is the link for our Bussiness Website: [www.cervihope.com](https://www.cervihope.com/)", divider="gray")
+    st.subheader("This is the link for our Bussiness Website: [CerviHope](https://www.cervihope.com/)", divider="gray")
 
     username = st.text_input("👤 Enter Username")
     password = st.text_input("🔒 Enter Password", type="password")
