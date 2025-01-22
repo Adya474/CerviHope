@@ -9,6 +9,8 @@ import pandas as pd
 st.set_option('client.showErrorDetails', False)
 
 IMAGE_URL = "https://cdn.cancercenter.com/-/media/ctca/images/others/blogs/2016/08-august/09-news-cell-wars-fb.jpg"
+website_url = "https://cervihope.com/"
+
 # CONSTANTS
 PREDICTED_LABELS = ['High squamous intra-epithelial lesion', 
                     'Low squamous intra-epithelial lesion', 
@@ -58,6 +60,7 @@ def get_prediction(image_data):
 
 
 def login_page():
+    st.subheader("This is the link for our Bussiness Website:" % website_url, divider="gray")
     st.title("CerviHope Login")
 
     username = st.text_input("👤 Enter Username")
