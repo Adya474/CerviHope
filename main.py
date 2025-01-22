@@ -66,7 +66,7 @@ def login_page():
     password = st.text_input("🔒 Enter Password", type="password")
 
     st.markdown("""
-    The username for the judges: arya
+    The username for the judges: arya                  
     The password for the judges: arya1234
     """)
   
